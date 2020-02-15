@@ -1,0 +1,116 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content>
+  <!-- <p>What's your favorite animal?</p> -->
+  <!-- <mat-form-field>
+    <mat-label>Favorite Animal</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field> -->
+</div>
+<div class="grid-container">
+  <div class="grid-item">
+    <p>Email ID: {{data.email}}</p>
+  </div>
+  <div class="grid-item">
+    <p>Phone No.: {{data.phone}}</p>
+  </div>
+  <div class="grid-item">
+    <p>Address: {{data.address}}</p>
+  </div>  
+  <div class="grid-item">
+    <p>Status: {{data.status}}</p>
+  </div>
+</div>
+<button mat-raised-button color="accent" (click)="addRoom()">Add Room</button>
+<mat-tab-group *ngIf="addRoomFlag">
+  <mat-tab label="Interior">
+    <mat-accordion>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Living Room
+          </mat-panel-title>
+          <mat-panel-description>
+            Enter your living room details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 length</mat-label>
+          <input matInput>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 Width</mat-label>
+          <input matInput type="number" min="1">
+        </mat-form-field>
+        <button mat-button>
+          <mat-icon>add_circle</mat-icon>
+        </button>
+      </mat-expansion-panel>
+
+
+      <mat-expansion-panel (opened)="panelOpenState = true"
+                           (closed)="panelOpenState = false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Bedroom 1
+          </mat-panel-title>
+          <mat-panel-description>
+            <!-- Currently I am {{panelOpenState ? 'open' : 'closed'}} -->
+            Enter your bedroom 1 details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>I'm visible because I am open</p>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Bedroom 2
+          </mat-panel-title>
+          <mat-panel-description>
+            Enter your bedroom 2 details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 length</mat-label>
+          <input matInput>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 Width</mat-label>
+          <input matInput type="number" min="1">
+        </mat-form-field>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Washroom
+          </mat-panel-title>
+          <mat-panel-description>
+            Enter your washroom details
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 length</mat-label>
+          <input matInput>
+        </mat-form-field>
+    
+        <mat-form-field>
+          <mat-label>Wall 1 Width</mat-label>
+          <input matInput type="number" min="1">
+        </mat-form-field>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </mat-tab>
+  <mat-tab label="Exterior"> Content 2 </mat-tab>
+</mat-tab-group>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button  cdkFocusInitial>Ok</button>
+</div>

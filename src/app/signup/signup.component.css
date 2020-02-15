@@ -1,0 +1,39 @@
+/* body { height: auto !important } */
+
+.full-width {
+  width: 100%;
+}
+
+.shipping-card {
+  min-width: 120px;
+  /* margin: 20px auto; */
+  /* padding: 80px 20px 80px 20px; */
+  vertical-align: middle;
+  padding-top: 60px;
+  padding-right: 250px;
+  padding-bottom: 50px;
+  padding-left: 250px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+  padding-bottom: 10px!important;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.mainHeader {
+  font-size: 35px;
+}
