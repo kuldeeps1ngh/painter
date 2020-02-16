@@ -44,7 +44,7 @@ export class UserListComponent implements OnInit {
   viewUserDetails(userdata) {
     console.log('userdata', userdata);
     const dialogRef = this.dialog.open(UserDetailComponent, {
-      width: '800px',
+      width: '80%',
       height: '400px',
       data: userdata
     });
